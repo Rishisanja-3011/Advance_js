@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notification Generator</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 min-h-screen p-8">
+
+    <div class="max-w-md mx-auto bg-white p-6 rounded-xl shadow-lg">
+
+        <h1 class="text-2xl font-bold mb-5">
+            Notification Generator
+        </h1>
+
+        <form id="form" class="space-y-4">
+
+            <div>
+                <label class="block mb-1">Horizontal Position</label>
+                <select id="X" class="w-full border p-2 rounded">
+                    <option value="left">Left</option>
+                    <option value="right">Right</option>
+                </select>
+            </div>
+
+            <div>
+                <label class="block mb-1">Vertical Position</label>
+                <select id="Y" class="w-full border p-2 rounded">
+                    <option value="top">Top</option>
+                    <option value="bottom">Bottom</option>
+                </select>
+            </div>
+
+            <div>
+                <label class="block mb-1">Theme</label>
+                <select id="theme" class="w-full border p-2 rounded">
+                    <option value="dark">Dark</option>
+                    <option value="light">Light</option>
+                </select>
+            </div>
+
+            <div>
+                <label class="block mb-1">Notification Message</label>
+                <input
+                    type="text"
+                    id="message"
+                    placeholder="Enter your message"
+                    class="w-full border p-2 rounded"
+                    required
+                >
+            </div>
+
+            <div>
+                <label class="block mb-1">Duration (seconds)</label>
+                <input
+                    type="number"
+                    id="time"
+                    placeholder="Enter seconds"
+                    min="1"
+                    value="3"
+                    class="w-full border p-2 rounded"
+                    required
+                >
+            </div>
+
+            <button
+                type="submit"
+                class="w-full bg-blue-600 text-white p-3 rounded hover:bg-blue-700"
+            >
+                Show Notification
+            </button>
+
+        </form>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
